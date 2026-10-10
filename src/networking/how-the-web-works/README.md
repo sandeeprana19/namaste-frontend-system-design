@@ -174,15 +174,84 @@ But at a high level, what is needed is my **pincode**.
 
 ### IP Address
 
+Inside exactly, I can talk about multiple other things. I should have an accurate address or not. But at a high level, what is needed is my pincode.
+
 Similarly, as I said, if the 2 devices has to connect on the internet it need something called **IP Address**.
 
-### Internet-Connected / IoT Devices
+Now, I have mobiles or any damn thing like right now I am using **IoT (Internet of Things) device** where I can access my gadgets like screen reader or the lock basically, or probably the sensors, cameras that I see, which can be accessed remotely.
 
-Now, I have mobiles or any damn thing like right now I am having **IoT (Internet of Things) device** where I can access my gadgets like:
+### How can I access those IoT devices remotely?
 
-- screen reader
-- the lock basically
-- probably the sensors
-- cameras that I see
+These things work because each and every device basically have something called IP address and using this IP address basically I can connect to these things very effectively.
 
-which can be accessed remotely.
+Now, in short, anything on the internet I want to connect I need a dedicated IP for those things so that I can reach out and do whatever job I wanted to do which is allow.
+
+Now, I need to understand few more simple terminology over here and what are those?
+
+### What I type from the browser?
+
+I don't type anything which is IP address like `152.222.1221`, so who do remember this damn difficult, so no one remembers these IP addresses basically so it's damn complicated.
+
+### What we remember?
+
+What we remember: `google.com`, `flipkart.com`, `amazon.com`, `linkedin.com`. So these are some names that we remember.
+
+### What we call these names?
+
+Basically, we call these names as **domain names**.
+
+### What happens in this particular case? Let's try to understand this to get a deeper understanding.
+
+When I am typing something like `google.com` in this particular case, now `google.com` is a name, but what I need ultimately? So I need an **IP**, because I understand having name I reach out to someone and say that example:
+
+I go to post office and I say please order this to Chirag's and this is a courier that need to be delivered to Chirag's.
+
+### What postman is going to say?
+
+"Boss, I can't because I need to give a specific location or an address which is the IP address in order to send the courier."
+
+Exactly, using these names on internet I can't go anywhere. I need a dedicated IP address which can be allocated or which can be said to the respective server.
+
+### How can I do?
+
+From the browser or the mobile or I can say any system from where I searching basically or probably my laptop.
+
+### What I do?
+
+I need to get some internet connection.
+
+# How do I get the internet connection?
+
+Consider example:
+
+I am using a mobile and from mobile I use something call let's say I am getting a Wi-Fi probably or probably I am using my mobile tower. So my internet connectivity probably in my case is coming from my mobile tower or cell tower.
+
+So in my area the cell tower which is, see basically, we have:
+
+### Where I get this cell tower connectivity?
+
+There is some phone companies like Airtel, Jio, and there can be many others basically providers that we have.
+
+So, these companies are providing internet connectivity to these cell towers. And finally, from cell tower we are getting this internet connectivity.
+
+Now, once my request goes to the cell tower saying that I need something called `google.com`, and then cell tower goes to another server which is called **Domain Name Server**, which is **DNS** in this particular case.
+
+### What it says?
+
+"Boss, please give me the IP address associated with `google.com` because DNS is something like a phone book or a directory where I have name and IP address associated."
+
+So what I get, like I look for this name, then I will get the IP address. It's like any book or phone book I had in my home.
+
+Exactly, that is what happens over here in DNS.
+
+Now, I get the IP address which I got back from DNS.
+
+**DNS → Phone server → Tower**, and I get the IP address.
+
+Using that IP address, I know which server needs to be hit.
+
+### Where I go?
+
+I go to my tower → I go to my phone company → and basically from there the request goes to the respective computer or respective server or respective data center where it needs to hit.
+
+From there, I basically get some data and that data can be any format and it can be a HTML, CSS, JavaScript that we talked about, which is a building block of any application and which is very, very essential.
