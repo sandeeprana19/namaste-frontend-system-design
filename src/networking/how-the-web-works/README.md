@@ -255,3 +255,167 @@ Using that IP address, I know which server needs to be hit.
 I go to my tower → I go to my phone company → and basically from there the request goes to the respective computer or respective server or respective data center where it needs to hit.
 
 From there, I basically get some data and that data can be any format and it can be a HTML, CSS, JavaScript that we talked about, which is a building block of any application and which is very, very essential.
+
+### Example: using a mobile phone
+
+Suppose I am using a mobile phone and getting Wi-Fi, or using my mobile tower. My internet connectivity may be coming from a mobile tower or cell tower.
+
+### Where do I get this cell-tower connectivity?
+
+There are phone companies like Airtel, Jio, and many others. These companies provide internet connectivity to cell towers. Finally, we get internet connectivity from the cell tower.
+
+When my request goes to the cell tower, it says that it needs something from `google.com`. The cell tower sends the request to another server called the **Domain Name Server (DNS)**.
+
+### What does DNS say?
+
+“Boss, please give me the IP address associated with `google.com`.”
+
+DNS is like a phone book or directory where a name and its IP address are associated. When I look up a name, I get its IP address, just as I might look up a name in a book or phone book at home.
+
+That is exactly what happens with DNS. I get the IP address back from DNS.
+
+The DNS returns an IP address. Using that IP address, I know which server needs to be hit.
+
+### Where does the request go?
+
+I go to my tower → my phone company → the respective computer/server or data centre that the request needs to reach.
+
+From there, I get some data. That data can be in any format, such as HTML, CSS, or JavaScript. These are building blocks of an application and are essential.
+
+### At a very high level, what happens?
+
+The diagram shows:
+
+- **Client** sends a **Request** to the **Server**.
+- **Server** sends a **Response** back to the **Client**.
+- The client URL is represented as `http://`.
+
+### How do I get an internet connection?
+
+For `google.com`, the illustrated path is:
+
+`Mobile Browser ⇄ Cell Tower ⇄ Phone Company ⇄ DNS`
+
+The diagram also shows the DNS and the site/server, with arrows indicating requests and responses travelling between the mobile browser, cell tower, phone company, DNS, and site.
+
+Similar examples can be discussed, including more advanced cases. This is how things might work at home.
+
+### Home network diagram
+
+```text
+INTERNET
+   |
+  ISP
+   |
+   +---- Modem ---- Router
+   |                  |
+Telephone             +---- Computer 1
+                      +---- Computer 2
+                      +---- Laptop (Wi-Fi)
+                      +---- Mobile (Wi-Fi)
+```
+
+### What generally happens?
+
+I may have two computers at home, or a mobile, laptop, and multiple other devices.
+
+### What do I use in general?
+
+I use two ways to connect:
+
+1. I connect my laptop using a **LAN** connection.
+2. Or I use **Wi-Fi**.
+
+### Where do I get the LAN or Wi-Fi connection?
+
+I get it from my **router**.
+
+A router helps broadcast and make the internet available through Wi-Fi, or it may perform a proxy-related function, as noted in the notebook.
+
+Using the LAN, I can access my laptops or computers, provided they are connected properly.
+
+Nowadays, I can get a direct **fiber-optic cable** from my operator, such as Jio, Airtel, etc., which provides fiber-optic connectivity at home.
+
+### How did internet connectivity work earlier?
+
+Earlier, people got internet through telephone wires. A telephone wire had to be available at home.
+
+### What were telephone wires used to do?
+
+Something had to convert the telephone-line signal into an internet signal. That device was called a **modem**.
+
+A modem was used to convert the telephone-line signal coming from the phone line into internet connectivity.
+
+Ultimately, the phone wires were provided by a service provider — the **Internet Service Provider (ISP)**. The phone company is not the internet itself; the ISP provides internet service.
+
+From the ISP, I can access the internet, reach DNS, reach a specific IP address, and reach the respective places depending on what I am using.
+
+### At a high level, what happens when I type `google.com` or `flipkart.com`?
+
+These are the previous steps that happen in order to get my first web page rendered.
+
+Now, let’s dig deeper into the process and understand how the web works.
+
+### Request path
+
+The notebook describes this flow:
+
+1. From my laptop, the request goes to my router.
+2. From my router, it goes to the ISP.
+3. From the ISP, it goes to the Domain Name Server (DNS).
+4. The DNS returns the IP address.
+5. The ISP and network path carry the request toward the destination/server, using the respective IP address to reach the appropriate server.
+6. The server sends back the page and the required resources.
+7. Finally, the page is rendered in my application.
+
+The diagram is:
+
+```text
+Client ⇄ Router ⇄ ISP ⇄ Server
+                 ↕ DNS
+
+Server → Webpage {HTML, CSS, JavaScript}
+       → Computer, Laptop, Tablet & Phone
+```
+
+The response contains HTML, CSS, JavaScript, and other resources needed to render the page.
+
+### What does “between” mean?
+
+A lot of things happen between my computer and my router, from my router to my ISP, and from my ISP to DNS.
+
+### What do I get back from the server?
+
+I get HTML, CSS, and JavaScript. These are building blocks, along with many other things. The combination of these resources is used to render the page.
+
+### What are we going to do next?
+
+We are going to drill into each of these places — the router, ISP, etc. — and understand them better.
+
+### Connecting one laptop with another laptop
+
+One option that comes to mind is using a **LAN cable**.
+
+The diagram illustrates a **wired network**, with multiple computers/nodes connected to one another through wires.
+
+The diagram shows a wired network in which multiple devices/nodes are connected to one another.
+
+### How a wired network works
+
+A wired network can be connected in a way similar to the diagram. One wired device can be connected to another, and that device can be connected to another one.
+
+If I want to connect one laptop with a number of other laptops, a wire has to be connected to each laptop.
+
+If I need to connect eight laptops as shown, the resulting arrangement becomes a **network hell** — very difficult to manage and not what we want.
+
+We connect a large number of devices, with connections spread around the world. We have seen enough wires on roads and elsewhere.
+
+We do not want another set of network chaos in our society or country.
+
+### What do we do?
+
+The notebook begins this question at the bottom of page 14:
+
+“In order to make this networking better, we thought…”
+
+The explanation continues beyond the visible written content in the supplied images.
