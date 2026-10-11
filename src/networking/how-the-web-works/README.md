@@ -419,3 +419,158 @@ The notebook begins this question at the bottom of page 14:
 “In order to make this networking better, we thought…”
 
 The explanation continues beyond the visible written content in the supplied images.
+
+### Wired network
+
+The diagram is titled **“Wired Network”** and shows multiple devices (labelled A–J) interconnected with many wires.
+
+In a wired network like the one shown, one wired device can be connected to another, and that device can be connected to another one.
+
+Suppose I have to connect one laptop with a number of other laptops. A wire has to be connected from each laptop to another laptop.
+
+If I have to connect eight laptops, the combination becomes a **network hell**. It becomes very difficult to get what we want.
+
+We cannot practically have all sorts of connections separating around the world, with wires on roads and wherever we go. We do not want another set of network connections—or “network hell”—in our society or country.
+
+### What do we do?
+
+In order to make this networking better, we thought about having better connectivity in terms of **wired and wireless connectivity**.
+
+### How does wireless connectivity work?
+
+Whenever we talk about something like wireless, imagine that I have my own router or connectivity from a cell tower. There may be Wi-Fi or a distributed network that I can use with my mobile and laptop.
+
+I cannot use wireless for longer durations in every situation because I may not get internet connectivity. It can also be affected by many things, such as weather conditions.
+
+Therefore, relying on wireless everywhere has problems; many things can affect it.
+
+### How is internet connectivity generally provided?
+
+In the real world, internet connectivity is a combination of both **wired and wireless** connections, used effectively.
+
+Let us dig deeper into what happens in this particular case.
+
+**Consider an example:** the notes continue on page 16.
+
+The diagram shows:
+
+- **Router 1** connected to devices **A, B, C, D, E**.
+- A central router (labelled **Router**) connected to Router 1, Router 2, and Router 3.
+- **Router 2** connected to devices **N, O, M, L, K**.
+- **Router 3** connected to devices **J, I, H, G, F**.
+
+Suppose Router 1 is in one room or on one floor, where multiple devices from A to E are present. There is another floor with multiple devices and people who need to connect.
+
+One way would be to keep one router on one floor, make it Wi-Fi enabled, and let people on the other floors use it.
+
+### What happens if only one router is used?
+
+The internet connectivity may not be good or strong. People nearer to the router may be able to access it, while people far away may not be able to access it that much.
+
+### What strategy can be used instead?
+
+The notes begin describing a strategy using a central router and other routers:
+
+- A central router connects to the other routers.
+- The central router distributes connectivity through a LAN cable.
+- The LAN cable goes directly to the different routers.
+
+The continuation explains that routers connected to the central router help create a **Wi-Fi network** or even a **LAN network**. Depending on feasibility and accessibility, multiple users, developers, and other people can connect and use the internet.
+
+### Example: A building with multiple floors
+
+Suppose a building has multiple floors.
+
+I have one central router, from which multiple LAN cables—or a special fiber-optic cable—go from one floor to another floor where the respective routers are located.
+
+Those routers are responsible for distributing Wi-Fi, allowing other people to connect using that Wi-Fi connectivity.
+
+The routers are connected through LAN cables or optical fiber. The notes describe this arrangement as useful.
+
+### Where does the optical fiber come from?
+
+The notes ask whether broadband connectivity or optical fiber comes directly from the ISP to the home. The explanation continues on page 18.
+
+### Why does fiber not come directly from the ISP to every home?
+
+The notes explain that it would not be practical for a separate set of wires to run from an ISP to every flat or home.
+
+Instead, an ISP may have a central/local hub—described as an **Airtel hub**, **Jio hub**, or a hub from another ISP provider. Many wires from the ISP do not need to run individually to every home.
+
+### LAN, optical fiber, and hubs
+
+From the ISP, a LAN connection or optical-fiber connection comes into a locality. Hubs are available to manage and route the connection.
+
+In a society or neighbourhood, there may be a system or large routers configured to distribute the respective LAN or optical-fiber connections across the area.
+
+The responsibility for bringing internet connectivity to a locality or society may be handled through these large routers or hubs. They distribute the connection more effectively and bring optical fiber to the respective places.
+
+This is how internet connectivity is provided in the described setup.
+
+### Next topic: DNS
+
+The notes now turn to understanding what happens inside **DNS**, described as a very important part of the process.
+
+### Looking up a domain name
+
+Suppose I type `google.com` in the browser. What happens, and what do I get back?
+
+Typing `google.com` gives me an IP address. The notes use this example:
+
+```text
+google.com → 142.250.190.78
+```
+
+Here, `google.com` is the **domain name**, and `142.250.190.78` is the IP address written in the notes.
+
+### Domain names have multiple parts
+
+A domain name has multiple parts. For example, a name may contain:
+
+- `www`
+- `google`
+- `com`
+
+These parts have different meanings and work at different levels of the hierarchy used by DNS.
+
+Inside DNS, the notes compare these levels to looking up a word in a physical dictionary. To find a word, I need to know how to navigate to the right place in the dictionary.
+
+Similarly, because there are many domain names across the world, they cannot all be kept in one dictionary or at the same level. They need to be distributed in some way.
+
+### Example: Finding the correct government department
+
+Suppose I need to report a complaint to the government sector. I should know which department handles that kind of complaint, and exactly which department I should contact.
+
+In the same way, I need to drill deeper to reach the right department, place, or domain where I can get the IP address.
+
+The notes continue the explanation:
+
+To reach the right department, place, or domain, I need to drill deeper until I can get the IP address.
+
+### DNS hierarchy diagram
+
+The diagram divides domain names into levels:
+
+```text
+Root domain
+    "."
+     |
+     v
+Top-level domains
+    .edu    .org    .gov    .com    .au
+     |
+     v
+Second-level domains
+    openoffice.org
+    expedia.gov
+    microsoft.com
+    congress.au
+     |
+     v
+Third-level domains
+    www.expedia.gov
+    download.microsoft.com
+    sales.microsoft.org
+```
+
+The handwritten diagram groups these names by **root domain**, **top-level domains**, **second-level domains**, and **third-level domains**. Examples are reproduced as written in the notebook.
