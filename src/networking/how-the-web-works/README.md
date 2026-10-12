@@ -574,3 +574,214 @@ Third-level domains
 ```
 
 The handwritten diagram groups these names by **root domain**, **top-level domains**, **second-level domains**, and **third-level domains**. Examples are reproduced as written in the notebook.
+
+### Reaching the right domain
+
+So, what I meant by “drill deeper” is that, in order to reach the right department, the right place, or the right domain, I need to find the IP address.
+
+Exactly what happens in the case of DNS? What do I have, or what do I get?
+
+Let’s dig deeper into that.
+
+### DNS domain hierarchy diagram
+
+```text
+Root domain
+    "."
+     |
+     v
+Top-level domains
+  .edu   .org   .gov   .com   .au
+     |
+     v
+Second-level domains
+ openoffice.org   expedia.gov   microsoft.com   congress.au
+     |
+     v
+Third-level domains
+ www.expedia.gov   download.microsoft.com   sales.microsoft.org
+```
+
+### Root-level domain
+
+I have something called a **root-level domain**, represented by `"."`. It helps us get out to the root level. Whenever I refer to `"."`, it basically represents the root level.
+
+### Top-level domains (TLDs)
+
+Top-level domains are the endings I see in domain names, such as:
+
+- `.edu`
+- `.org`
+- `.gov`
+- `.au`
+- `.co`
+- `.in`
+- `.com`
+
+There are many such top-level domains.
+
+Using a top-level domain helps me understand where to dig deeper next and which server or part of DNS I need to query. DNS is also a combination of multiple servers.
+
+The top-level domain tells me which area I have to dig deeper into and which server I need to query inside DNS. DNS itself is also a combination of multiple servers.
+
+### Second-level domain
+
+Once I know the top-level domain, I get into the **second-level domain**.
+
+For example, in `google.com`, `google` is the second-level domain.
+
+Other examples mentioned in the notes include:
+
+- `openoffice.org`
+- `expedia.gov`
+- `microsoft.com`
+- `congress.au`
+
+The notes use `google` as an example of a second-level domain and explain that going into the second-level domain means digging deeper to understand the relevant part.
+
+### Third-level domain (subdomain)
+
+I also have **third-level domains**, which I can call subdomains.
+
+Examples shown in the notes:
+
+- `www.expedia.gov`
+- `download.microsoft.com`
+- `sales.microsoft.org`
+
+In these examples, `www`, `download`, and `sales` are third-level domain labels (subdomains).
+
+A domain can have a third-level label; it is not limited to only one possible third-level name.
+
+### What this hierarchy means
+
+Whenever I look for something in a domain, the domain consists of multiple parts. Using those parts helps me dig deeper into the respective server and eventually reach the right IP address.
+
+The hierarchy described in the notes is:
+
+1. Root domain
+2. Top-level domain
+3. Second-level domain
+4. Third-level domain
+
+This helps me finally reach the server that contains the IP address for the domain I am looking for.
+
+Let’s dig deeper into what happens inside a server.
+
+A server seems to be a single server, or I can say a single computer which is more than enough to handle requests. Does a server exactly work like that?
+
+Probably not.
+
+### Example: Popular websites
+
+Consider these questions:
+
+- How many people use `google.com`?
+- How many people use `facebook.com`?
+- How many people use Microsoft services?
+
+There are billions of people accessing these services. One single machine cannot do them justice. I need multiple machines, with high configurations, to serve that load.
+
+### Data centers
+
+```text
++------------------+
+|   Data Centers   |
++------------------+
+  Many machines / CPUs
+  Memory (RAM)
+  Storage
+  Processing capacity
+  Backup / power backup
+```
+
+There are data centers that contain large sets of CPUs and computers. These are not ordinary desktop setups with screens and monitors that I do not need for this purpose.
+
+Instead, I need CPUs and machines assembled together, power backup, memory, RAM, storage, and other resources associated with them. All the storage and processing resources are available across those machines.
+
+Consider a server or data center where there are multiple sets of machines or computers. These machines are mapped to a respective IP address, such as:
+
+```text
+142.250.190.78
+```
+
+Any request that comes to that IP address needs to be directed to the appropriate machine or set of machines.
+
+### Example: Looking for a particular application path
+
+In multiple cases, I might be looking for something like:
+
+```text
+/engineerchirag
+```
+
+Inside the machine, I may be looking for a specific path. For example, I build my application using Express, Node.js, Java, Servlets, or another technology.
+
+My application is running, and inside it I have defined my code to say what it should do or return when someone visits a particular path such as `/engineerchirag`.
+
+These things happen inside the application. I have control over how I write my code and what I want to return when people try to access those paths.
+
+### What happens behind the scenes?
+
+There are sets of machines mapped to a particular IP address. When a request comes in, it reaches that setup, and multiple things happen behind the scenes, such as **load balancing** and other request-routing operations.
+
+The goal is to route each request to the appropriate application or machine.
+
+Where are these servers located?
+
+Most of the time, I have heard that Google servers are in California, and there are many data servers across the world.
+
+Consider this example: I have a server that is very far away. Most of the servers I see might be in another part of the world, while I am in one location and trying to access them from somewhere else.
+
+What happens in that case?
+
+Accessing something from another part of the world can be difficult. There are multiple ways to connect.
+
+### Option 1: Satellite communication
+
+One way is through satellites. Wireless communication can happen through a satellite.
+
+The request flow described in the notes is:
+
+```text
+My device
+   |
+   | Request
+   v
+Satellite
+   |
+   v
+Data center / server
+   |
+   | Response
+   v
+Satellite
+   |
+   v
+My device
+```
+
+When I make a request, it goes to the satellite. From that satellite, it goes to the respective data center, and finally I receive the response.
+
+However, the satellite may be about **22,000 miles away from the data center**, and the distance from me to the satellite is also significant.
+
+How do I travel such a large distance over a wireless communication link? It can work, but there is a cost to that distance.
+
+### Problems with satellite communication
+
+Many things can affect the connection:
+
+- Bad weather
+- Wind
+- Other environmental obstacles
+- Other issues that affect wireless communication
+
+These obstacles can affect the reliability of the connection. Everything along the path matters.
+
+Satellite communication is not reliable enough for this particular way of communicating with a data center and accessing it from another part of the world.
+
+So, what can I do?
+
+Probably, another approach is to **bridge all of these data centers through some wired connectivity**.
+
+This continues the discussion of how servers and data centers communicate over long distances and how connectivity can be made more reliable.
