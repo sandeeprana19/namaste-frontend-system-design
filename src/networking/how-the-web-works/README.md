@@ -784,4 +784,129 @@ So, what can I do?
 
 Probably, another approach is to **bridge all of these data centers through some wired connectivity**.
 
-This continues the discussion of how servers and data centers communicate over long distances and how connectivity can be made more reliable.
+Now, what does it mean by?
+
+Instead of having this wireless, let's put some wire, which means let's dig entire Earth in order to put the wire across the world. So that, from one place to the other place, we have wires connectivity, meaning we have optical wires basically, and let the internet flow around the world.
+
+We have enough pit holes basically in our areas. So, let's not have pit holes across the world, digging the countries in order to connect the world using internet?
+
+No! If that's not the case, then how do we actually connect things basically on the internet across the globe?
+
+The right, or I will say the better way to connect such things are using the **optical-fibre network**.
+
+### How do we connect it?
+
+Now, one way to connect such wide network basically, in such case, we are something we do using optical fibre, but over the sea.
+
+**But, what does it mean?**
+
+## Let's try to understand it a bit
+
+If I will notice all the line colours that I see on world map?
+
+**What are these?**
+
+These are optical fibres which are spread across the world in order to connect the countries via internet.
+
+Now, this is something interesting. I see different different line colours. All of these maximum, all of these, I see the entire world one way or the other is connected via the oceans or via the under bodies.
+
+### Now, what people have done?
+
+People have done it very smartly, where maximum of these wires and optical fibres are put in a very decent fashion across via oceans and connecting the world together, where I will see definitely they are digging in and what not needed in order to connect the part of the world which is not connected by the water bodies or within a country.
+
+But maximum connecting countries and maximum places connecting the world are done via these optical fibres which are placed inside the oceans basically, which helps to connect the entire world.
+
+This is something which is very, very interesting.
+
+Now, the thing doesn't stop here. So, let's try to dig deeper a bit more. Like, when I say a bit more, I talked lots of these things basically coming from my ISP provider or what not.
+
+So, let's understand a bit more around that.
+
+**What I have at this place?**
+
+I am saying I have internet connectivity and—
+
+There are my ISP providers, so I have **BSNL, Airtel, Jio**, where I have some tower in my area from where I either get the wire connectivity or the wireless connectivity, using that I can be able to access different part of the area or city.
+
+So, there are some cool and crazy way that I know about.
+
+But I have to understand: who are these ISPs? How are these ISPs basically work? Are these ISPs who govern everything? How certain things are decided, like I might have heard multiple time at a country level, if I have to take a decision like I don't want to allow certain site and wanted to block, like in China where there are multiple rules and regulations that I know.
+
+So, how things are governed at a central level? How these ISPs also are distributed? How these ISPs connect with the other ISPs of the world? How these rules and regulations basically work?
+
+For that, I have to understand a bit deeper, getting into that and understand how the ISP architecture basically works.
+
+Now, let's dig deeper into a bit more into the bigger level of ISP architecture.
+
+**What it means?**
+
+## Internet Services Provider (ISP) — Architecture Diagram
+
+The notebook contains a large hand-drawn diagram headed **INTERNET SERVICES PROVIDER (ISP)**. The diagram shows internet connectivity passing through a hierarchy of local, regional, and global ISPs, with endpoints in the USA and China.
+
+### Labels transcribed from the diagram
+
+**Top / China side:**
+
+- PC / Router
+- PC / PC
+- PC / PC
+
+**Upper local ISP layer:**
+
+- Local ISP-6
+- Local ISP-7
+- Local ISP-8
+
+**Central ISP layer:**
+
+- Global ISP-2
+- Local ISP-1
+- Local ISP-2
+- Local ISP-3
+- Global ISP-1
+- Global ISP-3
+- Local ISP-4
+- Local ISP-5
+
+**Regional layer:**
+
+- Regional ISP-1
+
+**Lower / USA side:**
+
+- PC / Router
+- PC / PC
+- PC / PC
+
+The connecting lines show that endpoints connect to local ISPs, local ISPs connect to broader ISP layers, and the network continues through regional/global ISP connections across countries. The diagram labels **China** at one end and **USA** at the other.
+
+## Connecting a home computer to the internet
+
+When I am talking about these ISPs, then I have to understand that I am sitting at home and I am having a laptop/computer, and I have something called a router which is in place over here.
+
+Using that router, either the LAN or wireless connectivity, I get the internet, which is awesome.
+
+### Now, from where do I actually get the internet?
+
+I have some local ISPs. It can be ACT; it can be some other local provider who is bringing internet and giving me some offers like, well, this and that, and I will give you this kind of connectivity, this bandwidth, or what not.
+
+So, I have some local distributors which are my local ISPs.
+
+Now, there are multiple local ISPs which are connected with the regional ISPs. In my case, like Jio, Airtel, kind of thing, people are sitting at a regional ISP also basically, where these regional ISPs are something which are governed by government and where the controls are taken by the government.
+
+If any thing has to be blocked, if anything has to be circulated as information or anything, then these regional ISPs can be driven easily, managing at a regional level.
+
+So, similarly, for other countries basically there can be different regional ISPs.
+
+### Now, what I have basically?
+
+Similarly, I have some global ISPs like **Global ISP-1, Global ISP-2 and Global ISP-3**, which are governed by different organizations. All of these global ISPs are something which are basically governed by a central place or central organization, which helps to decide how and what kind of information can be communicated to the other part of the global ISPs of the world basically.
+
+By different organizations altogether. These global ISPs are something which are basically governed by central place or central organization which helps to decide how and what kind of information can be communicated to the other part of the global ISPs of the world basically.
+
+So, I have global ISPs, regional ISPs, and I have some local ISPs which helps me to get distributed my internet.
+
+So, I am seeing how many hops do we have in order to get the internet and the site which I am looking for. I search `google.com`; basically, it is coming from so many places across the world.
+
+The right-hand page in the last supplied image is blank; no written content is visible to transcribe.
