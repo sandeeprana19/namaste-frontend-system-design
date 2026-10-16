@@ -909,4 +909,213 @@ So, I have global ISPs, regional ISPs, and I have some local ISPs which helps me
 
 So, I am seeing how many hops do we have in order to get the internet and the site which I am looking for. I search `google.com`; basically, it is coming from so many places across the world.
 
-The right-hand page in the last supplied image is blank; no written content is visible to transcribe.
+Whenever I search on the internet, fiber optics help me travel the data at approximately the speed of light. Hence, I see how far away, basically, at a blink of my eye, I get the data.
+
+Now, a few more things I wanted to dig deeper into:
+
+## How exactly does data travel in such cases?
+
+Suppose I am looking for some data from my home to some other country altogether, as I am sending something to another country.
+
+How does the data flow?
+
+Whenever I am looking for data, maybe if I want to get data from my own country, it can be done in a very easy format. But what if I want to get data from another country altogether? Then how does the data basically flow? I have to understand this more deeply.
+
+## Flows: I have to understand this more deeply
+
+Now, my request basically goes using:
+
+**Local ISP → Regional ISP → Global ISPs → Regional ISPs of the different country → Local ISP → the place where the server or anything resides.**
+
+Now, data has to come back. Data does not come back like I have a big parcel or a big bed or an aeroplane getting shipped from one country to another country, and it does not get shipped as an unassembled one. It gets shipped as a distributed one.
+
+When I say distributed, it gets distributed into multiple small parts, or **data packets**.
+
+These data packets basically flow back in all possible ways in order to reach my destination. There can be multiple such paths, basically taking me to the destination. I get these packets from different routes, and finally they get assembled at my local ISP / client side.
+
+Now, I have all this data. I have to understand what other things are happening, meaning the cool things which are happening.
+
+## Example: payment confirmation
+
+Consider an example: I am doing a payment, and now my payment confirmation, basically that acknowledgement, is coming from a data packet from multiple different places to me.
+
+What if some data is lost? What happens if I get a partial confirmation? What if sometimes I get a message like, “Oh, my payment is still processing; please come back in 5 minutes”? How horrible are these five minutes in our lives?
+
+That is why understanding these small, small parts and small, small hubs is useful.
+
+Where can I optimize? What can I optimize? What can I optimize at the different levels?
+
+I am going to talk even at the advanced level about what billion-people-scale infrastructure, like Google or Netflix, does in order to provide very smooth streaming or data transmission, and the other things these companies do.
+
+They try to optimize and understand each of these parts in a very refined and better way. This helps them enrich or tweak some parts, or take advantage of these small parts, in order to provide me the best experience they can.
+
+## 3. So, till now: what have I seen and talked about?
+
+How things basically work from my computer to the router, from the router to the ISP, and from the ISP it goes to DNS. DNS returns me the IP, and using that IP I reach out to the server in order to get my HTML, CSS, JavaScript, and finally the rendering into the browser. That is what I have seen.
+
+That is why understanding the small, small parts is useful: where can I optimize, and what can I optimize at the different levels?
+
+I am going to talk even at the advanced level about what billion-people-scale infrastructure, like Google or Netflix, does in order to provide a very smooth transmission or data transformation, and the other things these companies are doing.
+
+They try to optimize and understand each of these parts in a very refined and better way. This helps them enrich or tweak some parts, or take advantage of the small parts, in order to provide me the best experience they can.
+
+It's time to drill further into each and every part.
+
+## 1. The first part: when I type a domain
+
+When I type something like `google.com`, `linkedin.com`, etc., what am I doing?
+
+I think that I am making a request directly to the router. No! There are many steps that happen in the browser itself.
+
+What are those things?
+
+In the browser, many things happen on my laptop before the request even reaches the router.
+
+The first thing that happens on my computer or laptop is that it tries to check in my browser whether it has any cache related to the IP or the domain I am looking for.
+
+In case I have it, it is not going to make any request to my server.
+
+It also checks about **Service Worker**: does the Service Worker have any cache? There can be multiple types of cache that can exist:
+
+1. At my browser: the **Network layer** and **HTTP layer**.
+2. At the **Service Worker layer** as well.
+
+### B. What if the cache is not found in the browser?
+
+Then it will go and make a check in the operating system. Do you know?
+
+In the operating system also, I can go and tweak the host and the IP address mapping.
+
+## What does it mean?
+
+I can say `google.com` points to my local host `3000` port, where my application will be bounded when I open that.
+
+### C. What if I cache something in the operating system? What do I do?
+
+I basically go to the router. Nowadays, even my routers are very smart: they have mapping or cache and lots of other things, so my domain-to-IP-address mapping can actually be stored in my routers too.
+
+Sometimes it is recommended to restart my router in order to refresh the settings.
+
+These kinds of things are supported by routers.
+
+### D. ISP-level caching
+
+At an ISP level, there is a different kind of caching that is supported. A lot of power basically comes at an ISP level.
+
+So, what I am going to do is first understand what I can actually do at a browser level.
+
+Let's see: I am going to a site called **`service-worker-stale-while-revalidate.glitch.me`**, which is a Service Worker-related website. I will go into the Network layer of this.
+
+Inside the Network layer, I will do a hard reload of this particular website. Whenever I do that, I should see it render a few things.
+
+## From where am I getting this data?
+
+1. The first data I got has **status 304**. Basically, it says that the data went to the server and the server said there is no change. I already had that data, so we use what I am already having. It is using and consuming the data which is already in the browser.
+
+2. If I notice there are a few statuses which say **200**, I ask: from where is this data coming?
+
+The data is actually coming from a **Service Worker**. This is something interesting.
+
+What does it mean? Is it even possible for data to come from a Service Worker?
+
+Let's try to dig deeper. When I hover on the Service Worker entry and look at the Network track, what am I seeing?
+
+The first fundamental thing I need to understand quickly is what happens when a browser makes a request.
+
+When an application makes a network request, there can be a maximum of around **3, 6, 8, or 10** requests, depending on the browser. The browser only makes that number of parallel requests.
+
+Any request beyond that is actually queued. The browser has a queuing mechanism, and the exact behavior depends on browser-to-browser support. The notes mention support for parallelism of **6 to 8 requests**.
+
+So, the browser queues any request that comes beyond that.
+
+In this case, all requests beyond that go to the queue mechanism. This request also went to the queue, but it was triggered to the Network layer very quickly because there was nothing in the queue.
+
+I see it took hardly **0.18 ms** for the confirmation to get done from the queue. I need to get something essential.
+
+Now, I notice there are multiple steps, but I want to highlight one interesting thing: it went to something called the **Service Worker** step.
+
+In Service Worker, it actually did a standby, and there was some wait of **10 ms**, basically. To be precise, I see it responded in **1.24 ms**. It got the response from the Service Worker and did not make any request to the server.
+
+**Note:** In this particular case, the Service Worker actually responded with data in **1.24 ms**.
+
+Can I ever imagine that I get data from my server in 1.24 ms?
+
+It is not possible, but I am caching / having some strategy in my Service Worker where I can say, “This is the API or this is the asset I wanted to cache.”
+
+This is where I can cache and leverage the cache, and render my application much faster.
+
+There are certain things coming from **disk cache** too. Disk cache basically comes from my browser cache as well.
+
+Let's talk about something different: **ISP**. The ISP is not just a provider that gives me the internet, or a proxy that gets me the IP address and lets me make a request to a server.
+
+No! An ISP does a lot more than I can think of.
+
+## What happens at the ISP layer?
+
+Let's dig deeper. At the ISP layer there are multiple concepts that are very popular. One of the concepts I want to highlight is called **peering**.
+
+### What does peering mean?
+
+I had talked about scenarios where, suppose, I am making a request from my own country, which is Belgium, and I am making a request to the USA.
+
+I talked about how, if the server is sitting in the other country, it has to go through multiple networks.
+
+…country, then it has to go through my local ISP. It has to go through a Regional ISP, a Global ISP, multiple global ISPs, and then Regional and Local ISPs. I actually get the data from my server, which is residing on the other side.
+
+Now, all of these take time.
+
+## What Google and other large companies started doing
+
+They started trying to optimize certain things.
+
+### What did they do?
+
+Instead of having a server sitting in different countries, they set up data centers in different countries themselves, so that I don't have to make a cross-country or cross-network request.
+
+But it is not limited to that. I am not just talking about cloud computing; I also have **CDNs**, which are sitting in different regions.
+
+I am talking beyond that. What does it mean?
+
+Even if I say this Google server resides over there, ideally it has to go through a Regional ISP, and from there it actually goes to the server in order to make the request. That is the normal flow.
+
+But many such companies like Google have established a mechanism where they can directly bypass my Regional ISP and directly connect to my Local ISP. Inside that, it can actually work as just a proxy to reach my home router, computers, or laptops.
+
+What is this technique called, where I don't have to go through so much processing time?
+
+It can work as a proxy to make this extra hop and reduce the extra hop. That technique is called **peering**.
+
+Google has done this very smartly. It established a peering arrangement where the number of hops gets reduced, and the videos and data streamed to my end are much faster. That is a useful technique.
+
+Now, I will tell one more strategy that companies like Netflix started doing.
+
+## What does Netflix do?
+
+Similar to Netflix, I will go to the ISP. The flow described in the notes is: first I get the domain, then the IP; when I hit the server, I get the data, and finally that data is shown to the user, such as videos.
+
+But Netflix wanted to provide a next-level user experience.
+
+It started asking: instead of sending all the requests and doing back-and-forth, why don't you provide me with a hosting platform where I can host my data? I will keep my data
+
+I will keep my videos, and you can stream those videos directly. You don't have to go through my domain, ISP, and all sorts of things.
+
+Many things can be avoided by putting the data at the ISP, renting some space, and leveraging that in order to stream and serve the data.
+
+As I am talking about ISPs, ISPs internally started doing something: keeping data at a regional or sometimes local level, depending on how many users there are or how much data is required at a particular hub or area.
+
+These kinds of optimizations are things I think companies like Google and Netflix are doing in order to make our streaming experience smoother, including streaming data access and how I actually operate on the web.
+
+Basically, Google and Netflix are great companies working in these directions.
+
+One thing I talked about is domain and IP address mapping. That is good.
+
+Let's try to understand more concepts around that.
+
+There is a company and an authorization or authority, which is called **ICANN (Internet Corporation for Assigned Names and Numbers)**.
+
+This ICANN authority helps to decide a guideline
+
+…basically, so what happens in this domain and IP mapping. I also talked about the root domain and all sorts of things.
+
+## Who governs that?
+
+The page ends with this question. No further answer is written on the supplied page.
