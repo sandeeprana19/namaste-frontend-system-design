@@ -28,8 +28,9 @@
 8. ACK: Acknowledgement.
 9. TCP: Transmission Central Protocol.
 10. SSL: Secure Sockets Layer.
-11. CSSOM: Cascading Style Sheets Object Model.
-12. HTTP: Hyper Text Transfer Protocol.
-13. QUIC: Quick UDP(User Datagram Protocol) Internet Connection.
-14. SMTP: Simple Mail Transfer Protocol.
-15. FTP: File Transfer Protocol.
+11. TLS: Transport Layer Security.
+12. CSSOM: Cascading Style Sheets Object Model.
+13. HTTP: Hyper Text Transfer Protocol.
+14. QUIC: Quick UDP(User Datagram Protocol) Internet Connection.
+15. SMTP: Simple Mail Transfer Protocol.
+16. FTP: File Transfer Protocol.
