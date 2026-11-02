@@ -34,3 +34,10 @@
 14. QUIC: Quick UDP(User Datagram Protocol) Internet Connection.
 15. SMTP: Simple Mail Transfer Protocol.
 16. FTP: File Transfer Protocol.
+17. API: Application Programming Interface.
+18. REST: Representational State Transfer.
+19. GraphQL: Graph Query Language.
+20. gRPC: gRPC Remote Procedure Calls.
+21. tRPC: tRPC TypeScript Remote Procedure Call.
+22. URL: Uniform Resource Locator.
+23. URI: Uniform Resource Identifier.
