@@ -41,3 +41,4 @@
 21. tRPC: tRPC TypeScript Remote Procedure Call.
 22. URL: Uniform Resource Locator.
 23. URI: Uniform Resource Identifier.
+24. TLD: Top Level Domain.
