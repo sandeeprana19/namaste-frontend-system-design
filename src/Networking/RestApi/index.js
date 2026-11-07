@@ -9,6 +9,30 @@ app.all("/", (req, res) => {
   res.send(`I'm Up!`);
 });
 
+const todos = [
+  {
+    id: "1",
+    title: "Task 1",
+    completed: false,
+  },
+  {
+    id: "2",
+    title: "Task 2",
+    completed: true,
+  },
+];
+
+// READ
+app.get("/todos", (req, res) => {
+  res.json(todos);
+});
+
+// CREATE
+
+// UPDATE
+
+// DELETE
+
 const PORT = 5111;
 app.listen(PORT, () => {
   console.log(`Server is running at ${PORT}`);
