@@ -1,7 +1,10 @@
 import express from "express";
+import bodyParser from "body-parser";
 
 const app = express();
 console.log(app);
+
+app.use(bodyParser.json());
 
 app.all("/", (req, res) => {
   console.log("Request >", req);
@@ -28,6 +31,13 @@ app.get("/todos", (req, res) => {
 });
 
 // CREATE
+app.post("/todos", (req, res) => {
+  const newTodo = req.body;
+  todos.push(newTodo);
+  res.json({
+    message: "New Todo Added!",
+  });
+});
 
 // UPDATE
 
