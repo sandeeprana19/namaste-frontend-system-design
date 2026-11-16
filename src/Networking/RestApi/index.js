@@ -39,8 +39,36 @@ app.post("/todos", (req, res) => {
 });
 
 // UPDATE
+app.put("/todos/:id", (req, res) => {
+  const newTodoData = req.body;
+  const todoParamId = req.params.id;
+  const todoIndex = todos.findIndex((td) => td.id === todoParamId);
+
+  if (todoIndex !== -1) {
+    todos[todoIndex] = {
+      id: todoParamId,
+      ...newTodoData,
+    };
+  }
+
+  res.json({
+    message: "Todo Updated Successfully",
+  });
+});
 
 // DELETE
+app.delete("/todos/:id", (req, res) => {
+  const todoParamId = req.params.id;
+  const todoIndex = todos.findIndex((td) => td.id === todoParamId);
+
+  if (todoIndex !== -1) {
+    todos.splice(todoIndex, 1);
+  }
+
+  res.json({
+    message: "Todo Deleted Successfully!",
+  });
+});
 
 const PORT = 5111;
 app.listen(PORT, () => {
