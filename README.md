@@ -42,3 +42,5 @@
 22. URL: Uniform Resource Locator.
 23. URI: Uniform Resource Identifier.
 24. TLD: Top Level Domain.
+25. CRUD: Create Read Update Delete.
+26. br: Brotli.
